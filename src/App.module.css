@@ -1,0 +1,13 @@
+.app{
+  width: 100vw;
+  height: 100vh;
+  background:var(--gray-500)
+}
+
+.app > header{
+  background: var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem 0 5rem 0;
+}
