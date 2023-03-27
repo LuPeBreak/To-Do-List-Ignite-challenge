@@ -12,6 +12,7 @@
 }
 
 .content {
+  padding: 0.5rem;
   max-width: 46rem;
   margin-top: calc(-3.25rem/2);
   margin-right: auto;

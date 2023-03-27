@@ -6,23 +6,30 @@ import logo from "./assets/logo.svg";
 
 //components
 import { Form } from "./components/Form/Form";
+import { TaskList } from "./components/TaskList/TaskList";
+
+export interface Task {
+  id: string;
+  title: string;
+  isComplete: boolean;
+}
 
 function App() {
-  const [taskList, setTaskList] = useState([
+  const [taskList, setTaskList] = useState<Task[]>([
     {
       id: uuidv4(),
-      title: "task",
+      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
       isComplete: true,
     },
     {
       id: uuidv4(),
-      title: "task2",
+      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.2",
       isComplete: true,
     },
     {
       id: uuidv4(),
-      title: "task3",
-      isComplete: true,
+      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.3",
+      isComplete: false,
     },
   ]);
 
@@ -42,11 +49,7 @@ function App() {
       </header>
       <main className={styles.content}>
         <Form onAddTask={handleAddTask}></Form>
-        <div>
-          {taskList.map((task) => {
-            return <p key={task.id}>{task.title}</p>;
-          })}
-        </div>
+        <TaskList tasks={taskList} />
       </main>
     </div>
   );

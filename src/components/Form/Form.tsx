@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { FiPlusCircle } from "react-icons/fi";
+import { HiOutlinePlusCircle } from "react-icons/hi";
 
 import styles from "./Form.module.css";
 
@@ -30,7 +30,7 @@ export const Form: React.FC<FormProps> = ({ onAddTask }: FormProps) => {
         placeholder="Adicione uma nova tarefa"
       />
       <button type="submit">
-        Criar <FiPlusCircle size={16} />
+        Criar <HiOutlinePlusCircle size={16} />
       </button>
     </form>
   );
