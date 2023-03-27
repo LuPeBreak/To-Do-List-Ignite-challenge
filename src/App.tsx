@@ -26,16 +26,25 @@ function App() {
     },
   ]);
 
+  function handleAddTask(taskTitle: string) {
+    const newTask = {
+      id: uuidv4(),
+      title: taskTitle,
+      isComplete: false,
+    };
+    setTaskList([...taskList, newTask]);
+  }
+
   return (
     <div className={styles.app}>
       <header>
         <img src={logo} alt="Logo to do" />
       </header>
       <main className={styles.content}>
-        <Form></Form>
+        <Form onAddTask={handleAddTask}></Form>
         <div>
-          {taskList.map(task =>{
-            return <p>{task.title}</p>
+          {taskList.map((task) => {
+            return <p key={task.id}>{task.title}</p>;
           })}
         </div>
       </main>
