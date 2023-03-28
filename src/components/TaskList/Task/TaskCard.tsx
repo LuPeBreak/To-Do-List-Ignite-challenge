@@ -21,7 +21,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({
         checked={task.isComplete}
         onChange={onChangeIsComplete}
       ></input>
-      <span className={styles.title}>{task.title}</span>
+      <span className={`${task.isComplete?styles.checkedTitle:null}  ${styles.title}`}>{task.title}</span>
       <button onClick={onDeleteTask} className={styles.deleteButton}>
         <HiOutlineTrash size={16} />
       </button>

@@ -28,6 +28,7 @@ export const Form: React.FC<FormProps> = ({ onAddTask }: FormProps) => {
         name="taskTitle"
         type="text"
         placeholder="Adicione uma nova tarefa"
+        required
       />
       <button type="submit">
         Criar <HiOutlinePlusCircle size={16} />
