@@ -1,0 +1,20 @@
+.noTasksMessage{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  color: var(--gray-300);
+}
+.noTasksMessage img{
+  margin-bottom: 1rem;
+}
+.noTasksMessage p{
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.noTasksMessage p:first-of-type{
+  font-weight: 700;
+}

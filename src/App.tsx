@@ -49,7 +49,7 @@ function App() {
       </header>
       <main className={styles.content}>
         <Form onAddTask={handleAddTask}></Form>
-        <TaskList tasks={taskList} />
+        <TaskList onTaskListChange={setTaskList} tasks={taskList} />
       </main>
     </div>
   );
