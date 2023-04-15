@@ -24,7 +24,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Javascript
+- Typescript
 - Vite
 - ReactJS
 - Git e Github
