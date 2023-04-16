@@ -15,23 +15,7 @@ export interface Task {
 }
 
 function App() {
-  const [taskList, setTaskList] = useState<Task[]>([
-    {
-      id: uuidv4(),
-      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-      isComplete: true,
-    },
-    {
-      id: uuidv4(),
-      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.2",
-      isComplete: true,
-    },
-    {
-      id: uuidv4(),
-      title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.3",
-      isComplete: false,
-    },
-  ]);
+  const [taskList, setTaskList] = useState<Task[]>([]);
 
   function handleAddTask(taskTitle: string) {
     const newTask = {
